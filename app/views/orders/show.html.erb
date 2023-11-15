@@ -19,9 +19,8 @@
           </tr>
         </thead>
         <tbody>
-          <% @products.each do |product| %>
-            <% line_item = @line_items.find { |item| item.product_id == product.id } %>
-            <%= render 'line_item', product: product, quantity: line_item.quantity %>
+          <% @order.line_items.each do |item| %>
+            <%= render 'line_item', product: item.product, quantity: item.quantity %>
           <% end %>
         </tbody>
         <tfoot>
