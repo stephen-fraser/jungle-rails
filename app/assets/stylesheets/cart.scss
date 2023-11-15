@@ -3,6 +3,11 @@
     width: max-content;
   }
 
+  .money {
+    font-family: "Montserrat";
+    color: rgba(0, 130, 29, 0.7);
+  }
+
   button.stripe-button-el span {
     border-radius: 0.25em;
     border: 0.1em solid rgba(0, 130, 29, 0.8);
