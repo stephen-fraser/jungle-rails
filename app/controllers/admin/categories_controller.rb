@@ -2,7 +2,8 @@ class Admin::CategoriesController < ApplicationController
   before_action :authenticate
 
   def index
-    @categories = Categories.order(id: :desc).all
+    @categories = Category.order(id: :desc).all
+    # raise @categories.inspect
   end
 
   def new
