@@ -9,8 +9,8 @@ RSpec.describe Product, type: :model do
   describe 'Validations' do
     # validation tests/examples here
     it 'is valid when all four mandatory fields are set' do
-      @product = Product.new(name: 'Yes', description: 'thing', price: 600, quantity: 2, category: @category )
-      @product.save
+      @product = Product.create(name: 'Yes', description: 'thing', price: 600, quantity: 2, category: @category )
+      # @product.save - don't need with Product.create only with Product.new
       expect(@product).to be_valid
     end
 
