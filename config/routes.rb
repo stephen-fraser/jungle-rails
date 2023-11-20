@@ -21,6 +21,16 @@ Rails.application.routes.draw do
     resources :categories, only: [:index, :new, :create]
   end
 
+  # these routes are for showing users a login form, logging them in, and logging them out.
+  #users routes
+  get '/signup' => 'users#new'
+  post '/users' => 'users#create'
+
+  #sessions routes
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
+
   # namespace :admin do
   #   get 'categories/index'
   # end
