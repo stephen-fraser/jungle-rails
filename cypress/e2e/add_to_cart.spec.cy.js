@@ -15,9 +15,9 @@ describe("Home page", () => {
     cy.get(".products article").should("have.length", 2);
   });
 
-  it("navigates to the first products product page", () => {
-    cy.get(".products article").first().click();
-    cy.url().should("include", "/products/2");
-    cy.get(".product-detail").should("be.visible");
+  it("Adds a product to the cart and the cart is increased by 1", () => {
+    cy.contains("My Cart (0)");
+    cy.contains("Add").first().click({ force: true });
+    cy.contains("My Cart (1)");
   });
 });
