@@ -23,6 +23,17 @@ CypressRails.hooks.before_server_start do
     quantity: 18,
     price: 24.99
   })
+
+  # Initiall Created a user here before swtiching 
+  # to creating in within the cypress test
+  # User.create!({
+  #   first_name: 'Tobias',
+  #   last_name: 'Funke',
+  #   email: 'blueman@hotmail.com',
+  #   password: '1234',
+  #   password_confirmation: '1234'
+  # })
+
 end
 
 CypressRails.hooks.after_transaction_start do
